@@ -7,9 +7,13 @@ function App() {
 const [counter, setCounter] = useState(15)
 //let counter = 15
 const addValue =() => {
-  setCounter(counter+1)
-  setCounter(counter+1)
-  setCounter(counter+1) // this will only increase count as 1 //work in batch
+
+  if(counter < 20) {
+    setCounter(counter+1)
+  }
+  // setCounter(counter+1)
+  // setCounter(counter+1)
+  // setCounter(counter+1) // this will only increase count as 1 //work in batch
 
   // setCounter((prevCounter) => prevCounter+1)
   // setCounter((prevCounter) => prevCounter+1)
@@ -17,7 +21,12 @@ const addValue =() => {
 }
 
 const removeValue = () =>{
-  setCounter(counter-1)
+  if(counter > 0) {
+    setCounter(counter-1)
+  
+  }
+  
+ 
 }
   return (
 
